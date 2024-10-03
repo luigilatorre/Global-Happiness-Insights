@@ -1,7 +1,3 @@
-# %% [markdown]
-# # Final Assignment
-
-# %%
 import numpy as np
 import pandas as pd
 
@@ -11,25 +7,21 @@ sns.set_theme()
 sns.set(rc={'figure.figsize':(15, 9)})
 sns.set(font_scale=1.5) 
 
-# %% [markdown]
-# Il dataset `world_happiness.csv` contenuto nella cartella `data` presenta una serie di variabili che possono essere utilizzate come proxy per la valutazione del benessere di un paese. La metrica `happiness_score` cerca di riassumere quanto sia "felice" ciascun paese. Carica e salva il dataset in un oggetto DataFrame chiamato `happy`. Come sempre, familiarizzati con il suo contenuto. 
-
-# %%
+# Il dataset `world_happiness.csv` contenuto nella cartella `data` presenta una serie di variabili che possono essere utilizzate come proxy per la valutazione del benessere di un paese.
+# La metrica `happiness_score` cerca di riassumere quanto sia "felice" ciascun paese. Carica e salva il dataset in un oggetto DataFrame chiamato `happy`. Come sempre, familiarizzati con il suo contenuto. 
 happy = pd.read_csv(r"C:\Program Files\Python312\python-homework\myspace\homework\final-assignment-ML-webscr\data\world_happiness.csv")
 happy.info()
 
-# %%
+#Cerco i valori nulli di happy e li distribuisco in una heatmap per capire come sono distribuiti.
 nan_values_transpose = happy.isna().transpose().copy()
 fig, ax = plt.subplots(figsize=(10, 6))
 sns.heatmap(nan_values_transpose, ax=ax, cmap="viridis")
 plt.show()
 
-# %%
 # Cerco quali valori nulli sono presenti nel DataFrame, essendo un massimo di 8 righe che li contengono mostro con un .head(10)
 nulls = happy[happy.isnull().any(axis=1)]
 nulls.head(10)
 
-# %%
 # BONUS - Ho 8 valori vuoti di "corruption", 1 di "social_support", 1 di "freedom", 1 di "generosity"
 # Voglio riempire i valori vuoti con medie più attinenti ed effettuo un data augmentation raggruppando i paesi per regione
 # cosi effettuerò una media più precisa per paesi limitrofi a quelli vuoti.
