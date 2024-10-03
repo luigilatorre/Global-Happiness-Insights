@@ -26,4 +26,4 @@ The dataset can be found in the `/data` folder. It includes several variables, i
 - The analysis shows that a 1-year increase in life expectancy corresponds to an increase of approximately 5.10 points in the happiness score.
 
 ## Code
-All calculations and analyses are implemented in the Python file located in the `/data` folder. The Python code handles data loading, cleaning, visualization, and modeling.
+All calculations and analyses are implemented in the Python file located in the [`global_happiness_insights.py`](/data/global_happiness_insights.py] in `/data` folder. The Python code handles data loading, cleaning, visualization, and modeling.
