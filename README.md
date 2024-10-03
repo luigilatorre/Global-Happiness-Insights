@@ -1,7 +1,7 @@
 # World Happiness Analysis
 
 ## Overview
-This project explores the `world_happiness.csv` dataset, which contains various variables that serve as proxies for evaluating the quality of life in different countries. The primary focus is on understanding the factors influencing happiness scores across different regions.
+This project explores the [`world_happiness.csv`](/data/world_happiness.csv) dataset, which contains various variables that serve as proxies for evaluating the quality of life in different countries. The primary focus is on understanding the factors influencing happiness scores across different regions.
 
 ## Dataset
 The dataset can be found in the `/data` folder. It includes several variables, including:
@@ -26,4 +26,4 @@ The dataset can be found in the `/data` folder. It includes several variables, i
 - The analysis shows that a 1-year increase in life expectancy corresponds to an increase of approximately 5.10 points in the happiness score.
 
 ## Code
-All calculations and analyses are implemented in the Python file located in the [`global_happiness_insights.py`](/data/global_happiness_insights.py] in `/data` folder. The Python code handles data loading, cleaning, visualization, and modeling.
+All calculations and analyses are implemented in the Python file located in the [`global_happiness_insights.py`](/data/global_happiness_insights.py) in `/data` folder. The Python code handles data loading, cleaning, visualization, and modeling.
